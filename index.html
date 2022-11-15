@@ -1,561 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/education.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/skills.css">
+    <link rel="stylesheet" href="./css/Phone.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
 </head>
+<style>
+    .sidenav {
+  height: 100%;
+  width: 00px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color:var(--main-color);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
 
-<body class="main-content">
-    <header class="container header active" id="home">
-        <div class="header-content">
-            <div class="left-header">
-                <div class="h-shape"></div>
-                <div class="image">
-                    <img src="pa.jpg" alt="">
-                </div>
-            </div>
-            <div class="right-header">
-                <h1 class="name">
-                    Hi, I'm <span>Paras Aghi.</span>
-                    A Backend Developer.
-                </h1>
-           
-                <div class="btn-con">
-                    <a href="https://drive.google.com/file/d/1h3KYsG8IeirxXLeQlVAHvmqX6L6JgcDo/view?usp=sharing" class="main-btn">
-                        <span class="btn-text">Download CV</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                </div>
-            </div>
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<body>
+    <header class="header">
+        <div class="name">
+            Paras Aghi
         </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skill">Skills</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div  onclick='openNav()' class="hamberger"><i class="fa-solid fa-bars"></i></div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skill">Skills</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
+          </div>
     </header>
-    <main>
-        <section class="container about" id="about">
-            <div class="main-title">
-                <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
-            </div>
-            <div class="about-container">
-                <div class="left-about">
-                    <h4>Information About me</h4>
-                    <p>
-                        I've worked hard in my education and now I'm ready to apply my knowledge into practice. I'm an
-                        experienced Java Backend Consultant. I have a diverse set of skills, ranging from development, to
-                        HTML + CSS + Javascript + Java, all the best way !
-                    </p>
-                    <div class="btn-con">
-                        <a href="#" class="main-btn">
-                            <span class="btn-text">Download CV</span>
-                            <span class="btn-icon"><i class="fas fa-download"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <!-- <div class="right-about">
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">650+</p>
-                            <p class="small-text">Projects <br /> Completed</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">10+</p>
-                            <p class="small-text">Years of <br /> experience</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">300+</p>
-                            <p class="small-text">Happy <br /> Clients</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">400+</p>
-                            <p class="small-text">Customer <br /> reviews</p>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <div class="about-stats">
-                <h4 class="stat-title">My Skills</h4>
-                <div class="progress-bars">
-                    <div class="progress-bar">
-                        <p class="prog-title">html</p>
-                        <div class="progress-con">
-                            <!-- <p class="prog-text">80%</p> -->
-                            <div class="progress">
-                                <span class="html"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">css</p>
-                        <div class="progress-con">
-                            <!-- <p class="prog-text">95%</p> -->
-                            <div class="progress">
-                                <span class="css"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">javascript</p>
-                        <div class="progress-con">
-                            <!-- <p class="prog-text">75%</p> -->
-                            <div class="progress">
-                                <span class="js"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">JAVA</p>
-                        <div class="progress-con">
-                            <!-- <p class="prog-text">75%</p> -->
-                            <div class="progress">
-                                <span class="react"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="progress-bar">
-                        <p class="prog-title">NodeJS</p>
-                        <div class="progress-con">
-                            <p class="prog-text">87%</p>
-                            <div class="progress">
-                                <span class="node"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Python</p>
-                        <div class="progress-con">
-                            <p class="prog-text">70%</p>
-                            <div class="progress">
-                                <span class="python"></span>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-            <!-- <h4 class="stat-title">My Timeline</h4>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2010 - present</p>
-                    <h5>Web Developer<span> - Vircrosoft</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2008 - 2011</p>
-                    <h5>Software Engineer<span> - Boogle, Inc.</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2016 - 2017</p>
-                    <h5>C++ Programmer<span> - Slime Tech</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2009 - 2013</p>
-                    <h5>Business Degree<span> - Sussex University</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2013 - 2016</p>
-                    <h5>Computer Science Degree<span> - Brookes University</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2017 - present</p>
-                    <h5>3d Animation<span> - Brighton University</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-            </div> -->
-        </section>
-        <section class="container" id="portfolio">
-            <div class="main-title">
-                <h2>My <span>Project</span><span class="bg-text">My Work</span></h2>
-            </div>
-            <p class="port-text">
-                Here is some of my work that I've done in various programming languages.
-            </p>
-            <div class="portfolios">
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="one-mg.png" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/AFFAN-AHMAD/project-1mg.git" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://charming-khapse-a87735.netlify.app/" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="plural.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/PARAS-AGHI/PLURAL-SIGHT.git" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://regal-daffodil-d0dbad.netlify.app/" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="nature.png" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/manishchouhan2396/naturesbasket_project.git" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://spiffy-bavarois-6d79d2.netlify.app/#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port4.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port5.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port2.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port7.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-        </section>
-        <section class="container" id="blogs">
-            <div class="blogs-content">
-                <div class="main-title">
-                    <h2>My <span>Blogs</span><span class="bg-text">My Blogs</span></h2>
-                </div>
-                <div class="blogs">
-                    <div class="blog">
-                        <img src="one-mg.png" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Tata one-mg
-                            </h4>
-                            <p>
-                                Tata 1mg, previously 1mg is a healthcare platform based in Gurgaon, India. It provides services, including e-pharmacy, diagnostics, e-consultation and health content.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="plural.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                PluralSight
-                            </h4>
-                            <p>
-                                Pluralsight, Inc. is an American privately held online education company that offers a variety of video training courses for software developers, IT administrators, and creative professionals through its website.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="nature.png" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                NatureBasket
-                            </h4>
-                            <p>
-                                Nature's Basket is an Indian grocery delivery chain of retail stores focused in gourmet food. It has a range of organic food, imported ingredients and exotic foods.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- <div class="blog">
-                        <img src="img/blog3.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Debbuging made easy with Web Inspector
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/port1.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Get started with Web Design and UI Design
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/port3.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                This is what you need to know about Web Design
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-        </section>
-        <section class="container contact" id="contact">
-            <div class="contact-container">
-                <div class="main-title">
-                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
-                </div>
-                <div class="contact-content-con">
-                    <div class="left-contact">
-                        <h4>Contact me here</h4>
-                        <!-- <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            In, laborum numquam? Quam excepturi perspiciatis quas quasi.
-                        </p> -->
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Location</span>
-                                </div>
-                                <p>
-                                    : New-Delhi
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>Email</span>
-                                </div>
-                                <p>
-                                    <span>: parasaghi@gmail.com</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Education</span>
-                                </div>
-                                <p>
-                                    <span>: Panipat Institute of Engineering and Technology</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Mobile Number</span>
-                                </div>
-                                <p>
-                                    <span>: 9355200021</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-globe-africa"></i>
-                                    <span>Languages</span>
-                                </div>
-                                <p>
-                                    <span>: Hindi, English, Punjabi</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="contact-icons">
-                            <div class="contact-icon">
-                                <a href="www.facebook.com" target="_blank">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="https://github.com/PARAS-AGHI" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-linkdin"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="right-contact">
-                        <form action="" class="contact-form">
-                            <div class="input-control i-c-2">
-                                <input type="text" required placeholder="YOUR NAME">
-                                <input type="email" required placeholder="YOUR EMAIL">
-                            </div>
-                            <div class="input-control">
-                                <input type="text" required placeholder="ENTER SUBJECT">
-                            </div>
-                            <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
-                            </div>
-                            <div class="submit-btn">
-                                <!-- <a href="#" class="main-btn">
-                                    <span class="btn-text">Download CV</span>
-                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
-                                </a> -->
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
-    <div class="controls">
-        <div class="control active-btn" data-id="home">
-            <i class="fas fa-home"></i>
+    <div id="home" class="home_cont">
+        <div class="details">
+            <h1>Hi, I`am Paras Aghi </h1>
+            <p>Java Backend Developer</p>
+            <p>“Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.” – Antoine de Saint-Exupery  </p>
+
+            <div class="project_btn">
+                <!-- <a href=""<button>Contact</button> -->
+                <a href="https://drive.google.com/file/d/17guWXiTlmsJGLY2nESCt3vlC_El-UECp/view?usp=share_link" download><button>Resume</button></a>
+            </div>
+
+            <div class="social">
+                <a href="https://github.com/PARAS-AGHI"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"></img></a>
+                <a href="https://www.linkedin.com/in/parasaghi"><img src="https://p.kindpng.com/picc/s/32-326233_linkedin-thompson-electric-company-linkedin-logo-bw-png.png"></a>
+                <a href="https://www.hackerrank.com/parasaghi"><img src="https://cdn.iconscout.com/icon/free/png-256/hackerrank-3628233-3031053.png"></a>
+
+
+            </div>
         </div>
-        <div class="control" data-id="about">
-            <i class="fas fa-user"></i>
-        </div>
-        <div class="control" data-id="portfolio">
-            <i class="fas fa-briefcase"></i>
-        </div>
-        <div class="control" data-id="blogs">
-            <i class="far fa-newspaper"></i>
-        </div>
-        <div class="control" data-id="contact">
-            <i class="fas fa-envelope-open"></i>
+     
+        <div class="profile_img">
+         
+            <div >
+                <img
+                    src="https://www.pngkey.com/png/detail/843-8432184_software-developer-png-pluspng-software-engineer-png-icon.png">
+            </div>
+
         </div>
     </div>
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
+
+
+
+    <div id="about" class="about_us">
+        <h2>About me</h2>
+        <div class="main">
+            <div id="about-us-image">
+                <img
+                    src="Asset\img\new image.jpeg">
+            </div>
+            <div id="content">
+                <ul>
+                    <li>I'm an aspiring Java Backend Developer, with a specialization in Spring, Spring-Boot, Rest Api, JDBC with
+                        SQL, Hibernate, HTML, CSS, JAVASCRIPT</li>
+                    <li>Confortable with JAVA 8 and above.Since very young age I am very much interested in learning new
+                        things</li>
+                    <li>I spend most of the time with technology. Enthusiastic Person always ready to moving parallel
+                        with technologies. I am ready to work and provide my best to the Organisation.</li>
+                </ul>
+
+                </p>
+            </div>
+
+        </div>
+
     </div>
-    <script src="app.js"></script>
+
+    <div id="skill" class="technical_skills">
+        <h1>My <span>Technical Skills</span></h1>
+        <div class="skills_btn">
+            <button onclick="Allskill()">All</button>
+            <button onclick="Frontend()">Frontend</button>
+            <button onclick="Backend()">Backend</button>
+        </div>
+        <div class="All_skills">
+            <div><img src="./Asset/skills/html-5.png"></div>
+            <div><img src="./Asset/skills/css-3.png"></div>
+            <div><img src="./Asset/skills/js.png"></div>
+            <div><img src="./Asset/skills/java.png"></div>
+            <div><img src="./Asset\img\spring.png"></div>
+            <div><img src="Asset\img\sql.png"></div>
+
+        </div>
+        <div class="forntend">
+            <div><img src="./Asset/skills/html-5.png"></div>
+            <div><img src="./Asset/skills/css-3.png"></div>
+            <div><img src="./Asset/skills/js.png"></div>
+        </div>
+        <div class="backend">
+            <div><img src="./Asset/skills/java.png"></div>
+            <div><img src="./Asset\img\spring.png"></div>
+            <div><img src="Asset\img\sql.png"></div>
+            <!-- <div><img src="./Asset/skills/js.png"></div> -->
+            
+
+        </div>
+    </div>
+    <style>
+        #education{
+            margin: 20px 0px;
+        }
+        .education_qualifcatiom{
+            display: grid;
+            grid-template-columns: fr max-content 1fr;
+        }
+        
+    </style>
+
+
+   
+    <h1 style="text-align:center;
+    font-family: var(--fontFamily);margin-top: 20px;">My Project</h1>
+    <div id="project" class="projects_cont">
+        <div>
+
+       
+        
+          <div class="project">
+            <div><img style="display: block;-webkit-user-select: none;max-width: 100%;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;"
+                    src="Asset/img/ssonemg.png">
+            </div>
+           
+
+            <p>Tata 1mg, previously 1mg is a healthcare platform based in Gurgaon, India. It provides services, including e-pharmacy, diagnostics, e-consultation and health content.</p>
+            
+            <div id="grid">
+              <div><i class="fa-brands fa-java"></i></i></div>
+              <div><img src="https://img.icons8.com/color/48/000000/my-sql.png"/></div>
+              <div><img src="https://img.icons8.com/material-rounded/24/000000/api-settings.png"/></div>
+            </div>
+          </br>
+            <div class="project_btn">
+                <a href="https://charming-khapse-a87735.netlify.app/" target="_blank"><button>Live </button></a>
+                <a href="https://github.com/AFFAN-AHMAD/project-1mg.git" target="_blank"><button>Github </button></a>
+            </div>
+        </div>    
+
+
+
+
+
+        <div class="project">
+            <div><img style="display: block;-webkit-user-select: none;max-width: 100%;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;"
+                    src="Asset/img/ssplural.png">
+            </div>
+            
+
+            <p> Pluralsight, Inc. is an American privately held online education company that offers a variety of video training courses for software developers, IT administrators, and creative professionals through its website. </p>
+            
+            
+            <div id="grid">
+              <div><i class="fa-brands fa-html5"></i></div>
+              <div><i class="fa-brands fa-css3"></i></div>
+              <div><i class="fa-brands fa-square-js"></i></div>
+            </div>
+          </br>
+            <div class="project_btn">
+                <a href="https://regal-daffodil-d0dbad.netlify.app/" target="_blank"><button>Live </button></a>
+                <a href="https://github.com/PARAS-AGHI/PLURAL-SIGHT.git" target="_blank"><button>Github </button></a>
+            </div>
+            
+        </div>
+        
+
+        <div class="project">
+            <div><img style="display: block;-webkit-user-select: none;max-width: 100%;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;"
+                    src="Asset\img/ssnature (1).png">
+            </div>
+           
+
+            <p> Nature's Basket is an Indian grocery delivery chain of retail stores focused in gourmet food. It has a range of organic food, imported ingredients and exotic foods.</p>
+            
+            <div id="grid">
+              <div><i class="fa-brands fa-html5"></i></div>
+              <div><i class="fa-brands fa-css3"></i></div>
+              <div><i class="fa-brands fa-square-js"></i></div>
+            </div>
+          </br>
+            <div class="project_btn">
+                <a href="https://spiffy-bavarois-6d79d2.netlify.app/#" target="_blank" ><button>Live </button></a>
+                <a href="https://github.com/manishchouhan2396/naturesbasket_project.git" target="_blank"><button>Github </button></a>
+            </div>
+        </div>
+
+
+        <!-- <div class="project">
+            <div><img style="display: block;-webkit-user-select: none;max-width: 100%;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;"
+                    src="Asset\img\youtubeclone2.png">
+            </div>
+            <p>This is Youtube clone which is daily assignment project which I have made using fetch api calls and time taken to completed this problem is in a day and technology used for this is mentioned below</p>
+            <div id="grid">
+              <div><i class="fa-brands fa-html5"></i></div>
+              <div><i class="fa-brands fa-css3"></i></div>
+              <div><i class="fa-brands fa-square-js"></i></div>
+            </div>
+          </br>
+            <div class="project_btn">
+                <a href="https://benevolent-fenglisu-23325b.netlify.app/" target="_blank"><button>Live </button></a>
+                <a href="https://github.com/masai-course/Mohammad_fp03_028/tree/master/unit-3/sprint-3/day-1/youtube%20clone%202" target="_blank"><button>Github </button></a>
+            </div>
+        </div>
+        <div class="project">
+            <div><img style="display: block;-webkit-user-select: none;max-width: 100%;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;"
+                    src="Asset\img\Screenshot (1034).png">
+            </div> -->
+
+<!--            
+            <p></p>
+            <div id="grid">
+              <div><i class="fa-brands fa-html5"></i></div>
+              <div><i class="fa-brands fa-css3"></i></div>
+              <div><i class="fa-brands fa-square-js"></i></div>
+            </div>
+          </br> -->
+            
+            
+            <!-- <div class="project_btn">
+                <a href="https://spiffy-bavarois-6d79d2.netlify.app/#" target="_blank"><button>Live </button></a>
+                <a href="https://github.com/manishchouhan2396/naturesbasket_project.git" target="_blank"><button>Github </button></a>
+            </div>
+        </div> -->
+
+    </div>
+    </div>
+    <br><br>
+      <h1 style="text-align:center ;"> Github Calender</h1>
+    <script
+  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
+></script>
+
+<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+<link
+   rel="stylesheet"
+   href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+/>
+
+<!-- Prepare a container for your calendar. -->
+<div class="calendar" id="calender">
+    <!-- Loading stuff -->
+    Loading the data just for you.
+</div>
+
+<script>
+    GitHubCalendar(".calendar #calender", "PARAS-AGHI");
+    // or enable responsive functionality
+    GitHubCalendar(".calendar ", "PARAS-AGHI", { responsive: true });
+</script>
+<br>
+<br>
+  <center><h1>Contact Us</h1></center>        
+  <div id="contact">
+    <div id="contactb">
+      <h2>Paras Aghi</h2>
+      <div id="grid1">
+        <a href="https://www.linkedin.com/in/parasaghi/"><div>LinkedIn</div></a>
+        <a href="https://github.com/PARAS-AGHI"><div>Github</div></a>
+        <a href="https://leetcode.com/Paras_Aghi/"><div>LeetCode</div></a>
+        <a href="mailto:parasaghi@gmail.com"><div>Email</div></a>
+        <a rel="noreferrer" target="_blank" href="tel:+919355200021"><div>Phone</div></a>
+      </div>  
+    </div>
+  </div>
+    
+
+    <footer>
+        <h1>JAVA Backend Devloper</h1>
+    </footer>
+
 </body>
-
 </html>
+<script src="./main.js"></script>
